@@ -1,0 +1,210 @@
+.oswald-font {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), url("http://jhonatanisc.github.io/Avance5Compromisos/imgs/dot-pattern.png");
+    background-size: 200px;
+
+}
+
+/*Contenedor*/
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*navegación*/
+
+.navegacion-principal a{
+    
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 7rem;
+}
+
+/*Embajadores*/
+.contenedor2{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    width: 80rem;
+    height: 50rem;
+    transition: all 400ms;
+}
+
+.box {
+    position: relative;
+    background-image: none;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box::after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 2rem;
+    background: #000;
+    color: #fff;
+    padding: 1rem 1rem 1rem 1rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    transform: translateY(6rem);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.contenedor2:hover .box{
+    filter: grayscale(100%) opacity(24%);
+}
+
+.box:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+.contenedor2 .box:hover{
+    filter: grayscale(0%) opacity(100%);
+}
+
+.contenedor2:has(.box-1:hover){
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+.contenedor2:has(.box-2:hover){
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+.contenedor2:has(.box-3:hover){
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+.contenedor2:has(.box-4:hover){
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+.contenedor2:has(.box-5:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.box:nth-child(even){
+    transform: translateY(1.6rem);
+}
+
+
+/*diseño Eric*/
+
+.montse-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1.headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    text-align: center;
+    color: rgb(49, 49, 49);
+}
+
+.detail .headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+
+}
+
+#induction p {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(49, 49, 49);
+}
+
+#description div {
+    /*border: 1px solid red*/
+}
+
+#container-compromisos {
+    padding: 1em;
+}
+
+.card {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#board label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+#board .avance {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.card-5 {
+    min-height: 440px;
+}
+
+section {
+    margin: 2em;
+}
+
+.bg-gray {
+    background-color: #838383 !important;
+}
+
+.bg-success {
+    background: rgb(255, 219, 1);
+    background: linear-gradient(55deg, rgba(231, 165, 48, 1) 0%, rgba(238, 192, 110, 1) 100%);
+}
+
+.bg-info {
+    background: rgb(206, 81, 22);
+    background: linear-gradient(108deg, rgba(206, 81, 22, 1) 0%, rgba(233, 110, 52, 1) 100%);
+}
+
+.bg-warning {
+    background: rgb(83, 140, 80);
+    background: linear-gradient(108deg, rgba(83, 140, 80, 1) 0%, rgba(109, 170, 105, 1) 100%);
+}
+
+.bg-primary {
+    background: rgb(54, 122, 181);
+    background: linear-gradient(108deg, rgba(54, 122, 181, 1) 0%, rgba(89, 151, 205, 1) 100%);
+}
+
+.bg-danger {
+    background: rgb(104, 80, 137);
+    background: linear-gradient(108deg, rgba(104, 80, 137, 1) 0%, rgba(131, 105, 167, 1) 100%);
+}
+
+.bg-retraso {
+    background-color: #a5a5a5 !important;
+}
+
+.bg-gradient-general {
+    background: rgb(37, 167, 135);
+    background: linear-gradient(108deg, rgba(37, 167, 135, 1) 0%, rgba(46, 209, 169, 1) 100%);
+}
+
+.bg-gradient-top {
+    background: rgb(21, 183, 143);
+    background: linear-gradient(108deg, rgba(21, 183, 143, 1) 0%, rgba(26, 229, 179, 1) 100%);
+}
+
+.avance .progress,
+.avance .progress .progress-bar {
+    overflow: unset !important;
+    border-radius: 10px;
+    background-color: #00000017;
+}
+
+#areas_finalistas .card-header {
+    font-family: 'Oswald', sans-serif;
+}
